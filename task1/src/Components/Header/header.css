@@ -8,5 +8,9 @@
 }
 .bgimage img{
    float: right;
-   width:80%
+   width:75%
+   
+}
+.bgimage{
+    /* margin-right: 150px; */
 }
