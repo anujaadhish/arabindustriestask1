@@ -4,19 +4,32 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import './header.css'
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
-import Row from 'react-bootstrap/Row';
+import { MdDashboard } from "react-icons/md";
+import { BsPuzzleFill } from "react-icons/bs";
+import { IoChatbubblesSharp } from "react-icons/io5";
+import { MdHelp } from "react-icons/md";
+import { PiPottedPlantBold } from "react-icons/pi";
+import Button from 'react-bootstrap/Button';
+import Offcanvas from 'react-bootstrap/Offcanvas';
+import { useState } from 'react';
 
 
 const header = () => {
+//     const [show, setShow] = useState(false);
+
+//   const handleClose = () => setShow(false);
+//   const handleShow = () => setShow(true);
+
   return (
-    <div className='header' >
+    <div >
+       
+        <div className='header'> 
      <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary" data-bs-theme="#bad8f4" >
       <Container>
-        <Navbar.Brand   style={{paddingLeft:""}}><img src="logo.png" alt="" /></Navbar.Brand>
+        <Navbar.Brand   ><img src="logo.png" alt=""style={{paddingLeft:"20px"}} /></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
@@ -43,25 +56,90 @@ const header = () => {
         </Navbar.Collapse>
       </Container>
     </Navbar>
-
-    <Card style={{ width: '16rem' }}>
+    <div className='bgimage'>
+    <img src="/bg.png" alt="" /></div>
+<div  >
+    <Card style={{ width: '11.5rem' }}>
       <Card.Body>
       <Col xs={6} md={4}>
           <Image src="https://mdbcdn.b-cdn.net/img/new/avatars/9.webp" style={{width:"90px"}} roundedCircle />
         </Col>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
+        <Card.Title>Ramya Mohan</Card.Title>
         <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+         ramyamohan@gmail.com
         </Card.Text>
-        <Card.Link href="#">Card Link</Card.Link>
-        <Card.Link href="#">Another Link</Card.Link>
+       
+      </Card.Body>
+    </Card>
+    </div>
+    <div>
+    <Card style={{ width: '11.5rem' }}>
+      <Card.Body>
+        <Card.Title><MdDashboard /> Dashboard</Card.Title>
+        <Card.Text>
+         
+        </Card.Text>
+      
       </Card.Body>
     </Card>
    
-     
-       
+    <Card style={{ width: '11.5rem' }}>
+      <Card.Body>
+        <Card.Title><PiPottedPlantBold /> Perks</Card.Title>
+        <Card.Text>
+         
+        </Card.Text>
+      
+      </Card.Body>
+    </Card>
+    
+    <Card style={{ width: '11.5rem' }}>
+      <Card.Body>
+        <Card.Title> <BsPuzzleFill />  Addons</Card.Title>
+        <Card.Text>
+         
+        </Card.Text>
+      
+      </Card.Body>
+    </Card>
+    
+    <Card style={{ width: '11.5rem' }}>
+      <Card.Body>
+        <Card.Title><IoChatbubblesSharp />  FAQ</Card.Title>
+        <Card.Text>
+         
+        </Card.Text>
+      
+      </Card.Body>
+    </Card>
+    <Card style={{ width: '11.5rem' }}>
+      <Card.Body>
+        <Card.Title> <MdHelp /> Support</Card.Title>
+        <Card.Text>
+         
+        </Card.Text>
+      
+      </Card.Body>
+    </Card>
+    
+    </div>
+    </div>
+
+
+{/* 
+      <Button variant="primary" onClick={handleShow}>
+        Launch
+      </Button>
+
+      <Offcanvas show={show} onHide={handleClose}>
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+          Some text as placeholder. In real life you can have the elements you
+          have chosen. Like, text, images, lists, etc.
+        </Offcanvas.Body>
+      </Offcanvas> */}
 
 
     </div>
